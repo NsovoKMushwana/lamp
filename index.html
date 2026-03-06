@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Turn On The Lamp</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-wrapper">
+      <!-- Lamp Section -->
+      <div class="lamp-section">
+        <div class="lamp-container">
+          <div class="lamp-bulb" id="lampBulb"></div>
+          <div class="lamp-post"></div>
+          <div class="lamp-base"></div>
+        </div>
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="lampSwitch">
+            <span class="slider"></span>
+          </label>
+          <p class="switch-label">Turn on the lamp to continue</p>
+        </div>
+      </div>
+
+      <!-- Login Form Section -->
+      <div class="form-section">
+        <h1 class="form-title">Welcome Back</h1>
+        <p class="form-subtitle">Please turn on the lamp to unlock the form</p>
+        
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn-login">Sign In</button>
+        </form>
+
+        <div class="lamp-status" id="lampStatus">
+          Lamp is OFF - Turn it on to access the form
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <h2>Login Successful 🎉</h2>
+      <p>Welcome! You have successfully logged in.</p>
+      <p id="modalEmail"></p>
+      <button class="btn-modal" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Error Toast -->
+  <div class="toast" id="errorToast">
+    <span id="toastMessage"></span>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
